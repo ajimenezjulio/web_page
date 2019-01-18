@@ -590,8 +590,8 @@ var Sukces = {
                             type: 'POST',
                             //url:  'assets/php/contact-form.php',
                             url: '//formspree.io/ajimenezjulio@gmail.com',
-                            data: $form.serialize(),
-                            datatype: 'json',
+                            data: {message:"me"},//$form.serialize(),
+                            dataType: 'json',
                             error       : function(err) { setTimeout(function(){ $btn.addClass('error'); }, 1200); },
                             success     : function(data) {
                                 if (data != "success") {
