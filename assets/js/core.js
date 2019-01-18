@@ -589,7 +589,7 @@ var Sukces = {
                         $.ajax({
                             type: 'POST',
                             //url:  'assets/php/contact-form.php',
-                            url: 'https://formspree.io/ajimenezjulio@gmail.com',
+                            url: '//formspree.io/ajimenezjulio@gmail.com',
                             data: $form.serialize(),
                             dataType: 'json',
                             error       : function(err) { setTimeout(function(){ $btn.addClass('error'); }, 1200); },
