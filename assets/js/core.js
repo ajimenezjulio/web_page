@@ -592,7 +592,7 @@ var Sukces = {
                             url: 'https://script.google.com/macros/s/AKfycbw9OAX7mt8NeoxZNxYpU21vgPZzW8iyS9escuggEhPjAvRBxhGZ/exec',
                             dataType: "json",
                             contentType: 'application/json',
-                            data: {'name':'me', 'message':'hi', 'email':'me@me.com'},
+                            data: "{'name':'me', 'message':'hi', 'email':'me@me.com'}",
                             error       : function(err) { setTimeout(function(){ $btn.addClass('error'); }, 1200); },
                             success     : function(data) {
                                 if (data != "success") {
