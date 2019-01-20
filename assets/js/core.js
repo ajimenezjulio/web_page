@@ -590,7 +590,7 @@ var Sukces = {
                             type: 'POST',
                             //url:  'assets/php/contact-form.php',
                             url: 'https://script.google.com/macros/s/AKfycbw9OAX7mt8NeoxZNxYpU21vgPZzW8iyS9escuggEhPjAvRBxhGZ/exec',
-                            data: $form.serialize(),
+                            data: {name:'me', message:'hi', email:'me@me.com'},
                             dataType: 'json',
                             error       : function(err) { setTimeout(function(){ $btn.addClass('error'); }, 1200); },
                             success     : function(data) {
