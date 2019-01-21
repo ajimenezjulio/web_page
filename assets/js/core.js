@@ -591,6 +591,9 @@ var Sukces = {
                             //url:  'assets/php/contact-form.php',
                             url: 'https://getform.io/f/a35490e8-fb4d-4f39-afaa-d0c8b9593569',
                             crossDomain: true,
+                            headers:{
+                            	Accept: "application/json"
+                            },
                             dataType: "json",
                             data: $form.serialize(),
                             error       : function(err) { 
