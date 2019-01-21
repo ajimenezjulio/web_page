@@ -587,12 +587,13 @@ var Sukces = {
                     if ($form.valid()){
                         $btn.addClass('loading');
                         $.ajax({
+                        	crossDomain: true,
                             type: 'POST',
                             //url:  'assets/php/contact-form.php',
                             url: 'https://script.google.com/macros/s/AKfycbw9OAX7mt8NeoxZNxYpU21vgPZzW8iyS9escuggEhPjAvRBxhGZ/exec',
                             dataType: "json",
-                            data: "{'name':'me', 'message':'hi', 'email':'me@me.com'}"
-                            /*error       : function(err) { setTimeout(function(){ $btn.addClass('error'); }, 1200); },
+                            data: "{'name':'me', 'message':'hi', 'email':'me@me.com'}",
+                            error       : function(err) { setTimeout(function(){ $btn.addClass('error'); }, 1200); },
                             success     : function(data) {
                                 if (data != "success") {
                                     response = 'error';
@@ -607,7 +608,7 @@ var Sukces = {
                                 setTimeout(function(){
                                     $btn.removeClass('loading error success');
                                 }, 10000);
-                            }*/
+                            }
                         });
                         return false;
                     }
