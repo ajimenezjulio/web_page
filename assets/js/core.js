@@ -596,16 +596,8 @@ var Sukces = {
                             },
                             dataType: "json",
                             data: $form.serialize(),
-                            error       : function(err) { 
-                            	console.log("error");
-                            	console.log(err);
-                             setTimeout(function(){ $btn.addClass('error'); }, 1200); },
+                            error       : function(err) { setTimeout(function(){ $btn.addClass('error'); }, 1200); },
                             success     : function(data) {
-                            	console.log("success");
-								console.log(data);
-                            	console.log(data["success"]);
-                            	console.log(!("success" in data));
-
                                 if (!("success" in data)) {
                                     response = 'error';
                                 } else {
@@ -616,8 +608,6 @@ var Sukces = {
                                 }, 400);
                             },
                             complete: function(data) {
-                            	console.log("complete");
-                            	console.log(data);
                                 setTimeout(function(){
                                     $btn.removeClass('loading error success');
                                 }, 10000);
