@@ -595,7 +595,8 @@ var Sukces = {
                             data: $form.serialize(),
                             error       : function(err) { setTimeout(function(){ $btn.addClass('error'); }, 1200); },
                             success     : function(data) {
-                                if (data != "success") {
+                            	var parsed_data = JSON.parse(data);
+                                if (!("success" in parsed_data)) {
                                     response = 'error';
                                 } else {
                                     response = 'success';
