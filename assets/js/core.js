@@ -593,8 +593,12 @@ var Sukces = {
                             crossDomain: true,
                             dataType: "json",
                             data: $form.serialize(),
-                            error       : function(err) { setTimeout(function(){ $btn.addClass('error'); }, 1200); },
+                            error       : function(err) { 
+                            	console.log("error");
+                            	console.log(err);
+                             setTimeout(function(){ $btn.addClass('error'); }, 1200); },
                             success     : function(data) {
+                            	console.log("success");
                             	var parsed_data = JSON.parse(data);
 
 								console.log(data);
@@ -612,6 +616,8 @@ var Sukces = {
                                 }, 400);
                             },
                             complete: function(data) {
+                            	console.log("complete");
+                            	console.log(data);
                                 setTimeout(function(){
                                     $btn.removeClass('loading error success');
                                 }, 10000);
