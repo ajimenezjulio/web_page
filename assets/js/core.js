@@ -596,6 +596,12 @@ var Sukces = {
                             error       : function(err) { setTimeout(function(){ $btn.addClass('error'); }, 1200); },
                             success     : function(data) {
                             	var parsed_data = JSON.parse(data);
+
+								console.log(data);
+                            	console.log(parsed_data);
+                            	console.log(parsed_data["success"]);
+                            	console.log(!("success" in parsed_data));
+
                                 if (!("success" in parsed_data)) {
                                     response = 'error';
                                 } else {
