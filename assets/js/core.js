@@ -588,11 +588,11 @@ var Sukces = {
                         $btn.addClass('loading');
                         $.ajax({
                             type: 'POST',
-                            crossDomain: true,
                             //url:  'assets/php/contact-form.php',
-                            url: 'https://script.google.com/macros/s/AKfycbw9OAX7mt8NeoxZNxYpU21vgPZzW8iyS9escuggEhPjAvRBxhGZ/exec',
+                            url: 'https://getform.io/f/a35490e8-fb4d-4f39-afaa-d0c8b9593569',
+                            crossDomain: true,
                             dataType: "json",
-                            data: "{'name':'me', 'message':'hi', 'email':'me@me.com'}",
+                            data: $form.serialize(),
                             error       : function(err) { setTimeout(function(){ $btn.addClass('error'); }, 1200); },
                             success     : function(data) {
                                 if (data != "success") {
