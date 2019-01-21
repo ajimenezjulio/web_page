@@ -602,14 +602,11 @@ var Sukces = {
                              setTimeout(function(){ $btn.addClass('error'); }, 1200); },
                             success     : function(data) {
                             	console.log("success");
-                            	var parsed_data = JSON.parse(data);
-
 								console.log(data);
-                            	console.log(parsed_data);
-                            	console.log(parsed_data["success"]);
-                            	console.log(!("success" in parsed_data));
+                            	console.log(data["success"]);
+                            	console.log(!("success" in data));
 
-                                if (!("success" in parsed_data)) {
+                                if (!("success" in data)) {
                                     response = 'error';
                                 } else {
                                     response = 'success';
