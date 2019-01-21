@@ -587,8 +587,8 @@ var Sukces = {
                     if ($form.valid()){
                         $btn.addClass('loading');
                         $.ajax({
-                        	crossDomain: true,
                             type: 'POST',
+                            crossDomain: true,
                             //url:  'assets/php/contact-form.php',
                             url: 'https://script.google.com/macros/s/AKfycbw9OAX7mt8NeoxZNxYpU21vgPZzW8iyS9escuggEhPjAvRBxhGZ/exec',
                             dataType: "json",
